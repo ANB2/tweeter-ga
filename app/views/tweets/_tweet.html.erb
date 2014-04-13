@@ -2,7 +2,7 @@
   <div class='panel-body'>
     <%= image_tag tweet.user.gravatar_url, class: 'pull-left' %>
     <h4><%= tweet.body %></h4>
-    <span class='text-muted'><%= tweet.user.email %></span>
+    <span class='text-muted'><%= link_to_unless_current tweet.user.email, tweet.user %></span>
     <span class='text-muted'><%= link_to_unless_current "#{time_ago_in_words(tweet.created_at)} ago", tweet %></span>
   </div>
 </div>

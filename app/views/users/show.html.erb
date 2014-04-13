@@ -1,0 +1,14 @@
+<div class='panel panel-default user-profile'>
+  <div class='panel-body'>
+    <%= image_tag @user.gravatar_url %>
+    <p><%= @user.email %></p>
+    <p>Signed up: <%= time_ago_in_words @user.created_at %> ago</p>
+    <p>Followers: <%= @user.followers_count %></p>
+    <p>Following: <%= @user.follow_count %></p>
+    <% if current_user != @user %>
+    <%= link_to 'Follow', [@user, :follow], method: :post, class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
+
+<%= render @user.tweets %>

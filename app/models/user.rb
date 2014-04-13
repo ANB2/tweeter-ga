@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
   
   include Gravtastic
   gravtastic default: :wavatar
+  
+  acts_as_follower
+  acts_as_followable
 end
