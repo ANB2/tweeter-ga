@@ -1,7 +1,9 @@
-<h1>Listing tweets</h1>
+<div class="jumbotron">
+  <%= render 'form' %>
+</div>
 
-<%= render @tweets %>
-
-<br>
-
-<%= link_to 'New Tweet', new_tweet_path %>
+<div class="row">
+  <div class="col-lg-12">
+    <%= render @tweets %>
+  </div>
+</div>

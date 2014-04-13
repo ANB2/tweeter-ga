@@ -1,5 +1,8 @@
-<div class='tweet'>
-  <span class='user'><%= tweet.user.email %></span>
-  <p><%= link_to(tweet.body, tweet) %></p>
-  <p><%= link_to('Delete', tweet, method: :delete) %></p>
+<div class='tweet panel panel-default'>
+  <div class='panel-body'>
+    <%= image_tag tweet.user.gravatar_url, class: 'pull-left' %>
+    <h4><%= tweet.body %></h4>
+    <span class='text-muted'><%= tweet.user.email %></span>
+    <span class='text-muted'><%= link_to_unless_current "#{time_ago_in_words(tweet.created_at)} ago", tweet %></span>
+  </div>
 </div>

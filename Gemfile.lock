@@ -47,6 +47,7 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    gravtastic (3.2.6)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (2.0.6)
@@ -139,6 +140,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.1.1)
   coffee-rails (~> 4.0.0)
   devise
+  gravtastic
   jbuilder (~> 2.0)
   jquery-rails
   pg
