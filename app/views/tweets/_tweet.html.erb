@@ -1,0 +1,5 @@
+<div class='tweet'>
+  <span class='user'><%= tweet.user.email %></span>
+  <p><%= link_to(tweet.body, tweet) %></p>
+  <p><%= link_to('Delete', tweet, method: :delete) %></p>
+</div>
